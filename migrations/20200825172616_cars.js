@@ -8,7 +8,6 @@ exports.up = async function(knex) {
         table.text("title_status", 10)
         table.float("mileage").notNull()
     })
-
 };
 
 // * columns: VIN, make, model, mileage, transmission type (man, auto), 

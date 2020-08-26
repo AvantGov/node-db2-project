@@ -16,8 +16,11 @@ router.get('/', async (req, res, next) => {
 
 router.post("/", async (req,res, next) => {
     try {
-        const [id] = await database_access("fruits").insert(req.body)
-        const new_record = await database_access("fruits").where({ id }).first()
+        // * not destructured
+        
+        
+        const [id] = await database_access("cars").insert(req.body)
+        const new_record = await database_access("cars").where({ id }).first()
 
         res.status(201).json(new_record)
 
